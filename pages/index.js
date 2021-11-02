@@ -6,8 +6,8 @@ import Result from '../components/Result'
 import requests, { API_KEY } from '../utils/requests'
 
 
-export default function Home(props) {
- console.log(props)
+export default function Home({results}) {
+ console.log(results)
   return (
     <div>
       <Head>
@@ -17,7 +17,7 @@ export default function Home(props) {
       </Head>
       <Header />
       <Nav />
-      <Result /> 
+      <Result results={results}/> 
     </div>
   )
 };
@@ -25,18 +25,18 @@ export default function Home(props) {
 export async function getServerSideProps(context) {
 
   const genre  = context.query.genre
-  console.log('brni')
+ 
 
   const request = await fetch(
     `https://api.themoviedb.org/3${
-      requests[genre]?.url || requests.fetchTv.url
+      requests[genre]?.url || requests.fetchHorrorMovies.url
     }`)
   .then(res=> res.json());
-  console.log(request)
+ 
  
   
   return {
-    props: {...request.results}
+    props: {...request}
   }
 
 }
