@@ -1,3 +1,7 @@
+## The project was hosted on Vercel.
+
+It can be seen live on the following link : [Next.js](https://barna-hulu-2-0.vercel.app/)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
