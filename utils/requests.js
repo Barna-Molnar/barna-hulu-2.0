@@ -5,7 +5,7 @@ console.log(API_KEY)
 const requests =  {
     fetchTrending : {
         title: 'Trending', 
-        url: `/trending/all/week?api_key=${API_KEY}&language=en-US`
+        url: `/trending/all/day?api_key=${API_KEY}&language=en-US`
     },
      fetchTopRated : {
         title: 'TopRated', 
